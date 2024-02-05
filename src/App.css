@@ -1,16 +1,17 @@
 /* App.css */
 
 .app-container {
-  display: flex;
   background-color: #000; 
 }
-
+.componentcontainer{
+  display: flex;
+}
 .resizable-component {
-  border: 1px solid #6a00ff; /* Neon purple border color */
+  border: 1px solid #6a00ff; 
   margin: 10px;
   overflow: hidden;
-  background-color: #6a00ff; /* Neon purple background color */
-  color: #fff; /* White text color */
+  background-color: #6a00ff;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +19,101 @@
   border-radius: 8px;
   transition: box-shadow 0.3s ease-in-out;
 }
+h3{
+  color: white;
+  margin: 40px;
+}
 
 .resizable-component:hover {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
+.buttons{
+  color: white;
+  margin: 30px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #6a00ff;
+  border: none;
+  border-radius: 10px;
+  width: 7rem;
+}
+.modal button {
+  margin-left: 10px;
+  margin-top: 30px;
+  color: white;
+  background-color: #6a00ff;
+  width: 7rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+}
+.modal{
+  padding: 3rem;
+  margin-top: 3rem;
+  background-color: #000;
+  width: 50%;
+  margin: auto;
+}
+.modal select,
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding and border are included in the total width/height */
+}
+
+/* Additional styling for the select box */
+.modal select {
+  appearance: none; /* Removes default styles on some browsers */
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Style when the select box is focused */
+.modal select:focus {
+  outline: none;
+  border-color: #6a00ff;
+  box-shadow: 0 0 5px rgba(106, 0, 255, 0.5);
+}
+
+/* Additional styling for the input box */
+.modal input {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Style when the input box is focused */
+.modal input:focus {
+  outline: none;
+  border-color: #6a00ff;
+  box-shadow: 0 0 5px rgba(106, 0, 255, 0.5);
+}
+.modal h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+@media only screen and (max-device-width: 600px) {
+  /* Apply styles for devices with a maximum device width of 600px (adjust as needed) */
+  .buttons-container {
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .buttons {
+    display: block;
+    margin-top: 10px; /* Add some top margin for spacing */
+  }
+
+  h3 {
+    text-align: center; /* Center the text on smaller screens */
+  }
+}
+
